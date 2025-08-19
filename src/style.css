@@ -4,3 +4,8 @@
 @theme { 
   --font-primary: "Montserrat", sans-serif;
 }
+
+*{
+  box-sizing: border-box;
+
+}

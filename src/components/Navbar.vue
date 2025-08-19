@@ -73,7 +73,7 @@
 
 <script>
 export default {
-  name: 'Navigation',
+  name: 'Navbar',
   data() {
     return {
       showSignUp: false
