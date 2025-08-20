@@ -33,6 +33,8 @@
       <ContactForm/>
 
     </main>
+
+    <Footers/>
   </div>
 </template>
 
@@ -43,6 +45,7 @@ import Service from './Service.vue'
 import About from './About.vue';
 import Technology from './Technology.vue';
 import ContactForm from './ContactForm.vue';
+import Footers from './Footers.vue';
 
 export default {
   name: 'Home',
@@ -52,6 +55,7 @@ export default {
     Service,
     Technology,
     ContactForm,
+    Footers
   },
 }
 </script>

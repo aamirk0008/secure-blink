@@ -96,7 +96,7 @@ export default {
 <template>
   <div class="overflow-hidden mt-12 flex gap-8">
     <div class="flex">
-      <img class="w-[600px] h-[400px] relative -bottom-20" src="../assets/contact-2.png" alt="" />
+      <img class="w-[600px] h-[400px] relative -bottom-22 -left-2.5" src="../assets/contact-2.png" alt="" />
     </div>
     <div class="w-[400px] z-10 bg-white p-6 shadow-lg">
       <div>

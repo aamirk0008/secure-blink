@@ -74,7 +74,6 @@ export default {
       this.error = ''
 
       try {
-        // Simple authentication logic - replace with actual API call
         if (this.credentials.email && this.credentials.password) {
           // Simulate API call
           await new Promise((resolve) => setTimeout(resolve, 1000))

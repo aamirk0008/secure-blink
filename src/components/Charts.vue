@@ -1,10 +1,10 @@
 <template>
   <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+    <div class="shadow-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
       <div
         v-for="country in countries"
         :key="country.country"
-        class="bg-white rounded-lg p-6 shadow-sm border border-gray-100 flex flex-col items-center min-w-[180px]"
+        class=" rounded-lg p-6  flex flex-col items-center min-w-[180px]"
       >
         <div class="text-gray-500 text-sm font-medium mb-2">{{ country.country }}</div>
         <div class="flex items-center mb-4">
