@@ -13,18 +13,18 @@
         
         <div class="flex space-x-4">
            
-          <a 
-            href="#about" 
-            class=" hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium"
+          <router-link 
+            to="/about" 
+            class=" hover:text-blue-600 text-lg px-3 py-2 rounded-md font-medium"
           >
             About
-          </a>
-          <a 
-            href="#about" 
+          </router-link>
+          <router-link 
+            to="/services" 
             class=" hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium"
           >
             Services
-          </a>
+          </router-link>
           <a 
             href="#contact" 
             class=" hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium"
@@ -54,16 +54,17 @@
           <template v-else>
             <router-link 
               to="/dashboard"
-              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium"
+              class="text-[#0E77FF] bg-white hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium"
             >
               Dashboard
             </router-link>
-            <button 
+            <!-- <button 
               @click="logout"
               class="bg-red-600 text-white px-4 py-2 rounded-md text-md font-medium hover:bg-red-700"
             >
               Logout
-            </button>
+            </button> -->
+            <button>{{ user.name }}</button>
           </template>
         </div>
       </div>
@@ -76,6 +77,7 @@ export default {
   name: 'Navbar',
   data() {
     return {
+      user: {},
       showSignUp: false
     }
   },
@@ -90,6 +92,12 @@ export default {
       localStorage.removeItem('user')
       this.$router.push('/')
     }
-  }
+  },
+  mounted() {
+    const userData = localStorage.getItem('user')
+    if (userData) {
+      this.user = JSON.parse(userData)
+    }
+  },
 }
 </script>

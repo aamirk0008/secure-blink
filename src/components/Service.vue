@@ -62,7 +62,7 @@ export default {
           class="bg-white text-black p-8 w-[500px] rounded-sm shadow-2xl relative overflow-hidden"
         >
           <!-- Icon -->
-          <div class="space-y-6 z-100 relative">
+          <div class="space-y-6 z-90 relative">
             <div class="flex items-center gap-4">
               <img class="w-[70px]" src="../assets/service.png" alt="" />
               <h3 class="text-2xl font-bold mb-4">UI/UX Designing</h3>

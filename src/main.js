@@ -5,9 +5,13 @@ import './style.css'
 import Home from './components/Home.vue'
 import Login from './components/Login.vue'
 import Dashboard from './components/Dashboard.vue'
+import About from './components/About.vue'
+import Service from './components/Service.vue'
 
 const routes = [
   { path: "/", name: "Home", component: Home },
+  { path: "/about", name: "About", component: About },
+  { path: "/services", name: "Services", component: Service },
   { path: "/login", name: "Login", component: Login },
   {
     path: "/dashboard",

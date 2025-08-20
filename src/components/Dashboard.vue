@@ -1,3 +1,86 @@
+<script>
+import Charts from './Charts.vue'
+import Navbar from './Navbar.vue'
+import Sidebar from './Sidebar.vue'
+import img1 from '../assets/images.jpeg'
+import img2 from '../assets/teams-1.jpg'
+import img3 from '../assets/teams-2.webp'
+import img4 from '../assets/teams-3.avif'
+import img5 from '../assets/teams-4.jpeg'
+import { ref } from 'vue'
+
+export default {
+  name: 'Dashboard',
+  components: {
+    Navbar,
+    Charts,
+    Sidebar,
+  },
+  setup() {
+    const countries = ref([
+      {
+        name: 'United States',
+        percentage: 93,
+        flag: 'https://flagcdn.com/w40/us.png',
+      },
+      {
+        name: 'Italy',
+        percentage: 73,
+        flag: 'https://flagcdn.com/w40/it.png',
+      },
+      {
+        name: 'Spain',
+        percentage: 13,
+        flag: 'https://flagcdn.com/w40/es.png',
+      },
+    ])
+
+    return {
+      countries,
+    }
+  },
+  data() {
+    return {
+      user: {},
+      team: [
+        {
+          name: 'Andrew Johnson',
+          role: 'Top Trader',
+          img: img1,
+        },
+        {
+          name: 'Mike Tyson',
+          role: 'Manager',
+          img: img2,
+        },
+        {
+          name: 'Mark Boucher',
+          role: 'Top Trader',
+          img: img3,
+        },
+        {
+          name: 'Andrew Symonds',
+          role: 'Manager',
+          img: img4,
+        },
+        {
+          name: 'James Anderson',
+          role: 'Financial Analyst',
+          img: img5,
+        },
+      ],
+    }
+  },
+  mounted() {
+    // Get user data from localStorage
+    const userData = localStorage.getItem('user')
+    if (userData) {
+      this.user = JSON.parse(userData)
+    }
+  },
+}
+</script>
+
 <template>
   <Navbar />
   <div class="flex">
@@ -156,88 +239,7 @@
   </div>
 </template>
 
-<script>
-import Charts from './Charts.vue'
-import Navbar from './Navbar.vue'
-import Sidebar from './Sidebar.vue'
-import img1 from '../assets/images.jpeg'
-import img2 from '../assets/teams-1.jpg'
-import img3 from '../assets/teams-2.webp'
-import img4 from '../assets/teams-3.avif'
-import img5 from '../assets/teams-4.jpeg'
-import { ref } from 'vue'
 
-export default {
-  name: 'Dashboard',
-  components: {
-    Navbar,
-    Charts,
-    Sidebar,
-  },
-  setup() {
-    const countries = ref([
-      {
-        name: 'United States',
-        percentage: 93,
-        flag: 'https://flagcdn.com/w40/us.png',
-      },
-      {
-        name: 'Italy',
-        percentage: 73,
-        flag: 'https://flagcdn.com/w40/it.png',
-      },
-      {
-        name: 'Spain',
-        percentage: 13,
-        flag: 'https://flagcdn.com/w40/es.png',
-      },
-    ])
-
-    return {
-      countries,
-    }
-  },
-  data() {
-    return {
-      user: {},
-      team: [
-        {
-          name: 'Andrew Johnson',
-          role: 'Top Trader',
-          img: img1,
-        },
-        {
-          name: 'Mike Tyson',
-          role: 'Manager',
-          img: img2,
-        },
-        {
-          name: 'Mark Boucher',
-          role: 'Top Trader',
-          img: img3,
-        },
-        {
-          name: 'Andrew Symonds',
-          role: 'Manager',
-          img: img4,
-        },
-        {
-          name: 'James Anderson',
-          role: 'Financial Analyst',
-          img: img5,
-        },
-      ],
-    }
-  },
-  mounted() {
-    // Get user data from localStorage
-    const userData = localStorage.getItem('user')
-    if (userData) {
-      this.user = JSON.parse(userData)
-    }
-  },
-}
-</script>
 
 <style scoped>
 .progress-fill {
