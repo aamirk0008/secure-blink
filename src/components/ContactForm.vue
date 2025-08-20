@@ -107,9 +107,9 @@ export default {
           action="https://formsubmit.co/aamirsheikh0008@gmail.com"
           method="POST"
           @submit="handleSubmit"
-          class="flex flex-col"
+          class="flex flex-col items-start"
         >
-          <div class="">
+          <div class="w-full">
             <input
               name="email"
               type="email"
@@ -122,7 +122,7 @@ export default {
             <span v-if="errors.email" class="text-red-500 text-sm">{{ errors.email }}</span>
           </div>
 
-          <div class="">
+          <div class="w-full">
             <input
               name="name"
               type="text"
@@ -136,7 +136,7 @@ export default {
           </div>
 
           <!-- Added phone field as required -->
-          <div class="">
+          <div class="w-full">
             <input
               name="phone"
               type="tel"
@@ -150,7 +150,7 @@ export default {
           </div>
 
           <!-- Added subject field as required -->
-          <div class="">
+          <div class="w-full">
             <input
               name="subject"
               type="text"
@@ -163,7 +163,7 @@ export default {
             <span v-if="errors.subject" class="text-red-500 text-sm">{{ errors.subject }}</span>
           </div>
 
-          <div class="">
+          <div class="w-full">
             <textarea
               name="message"
               v-model="form.message"
@@ -196,9 +196,13 @@ export default {
           <button
             type="submit"
             :disabled="isSubmitting"
-            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
+            class="bg-blue-600 text-white px-4 py-2 rounded-[30px] gap-2 flex items-center hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
           >
-            {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+            {{ isSubmitting ? 'Sending...' : 'Get Started' }}
+            <div class="flex items-center">
+              <span><img class="w-[5px]" src="../assets/arrwhite.png" alt=""></span>
+              <span><img class="w-[5px]" src="../assets/arrwhite.png" alt=""></span>
+            </div>
           </button>
         </form>
 

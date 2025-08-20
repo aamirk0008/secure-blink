@@ -5,7 +5,7 @@
         <div class="flex space-x-8">
            <router-link 
             to="/" 
-            class=" hover:text-blue-600 text-lg px-3 py-2 rounded-md font-medium"
+            class=" hover:text-black transition duration-200 ease-in text-lg px-3 py-2 rounded-md font-medium"
           >
             Logo
           </router-link>
@@ -15,38 +15,38 @@
            
           <router-link 
             to="/about" 
-            class=" hover:text-blue-600 text-lg px-3 py-2 rounded-md font-medium"
+            class=" hover:text-black transition duration-200 ease-in text-md px-3 py-2 rounded-md font-medium"
           >
             About
           </router-link>
           <router-link 
             to="/services" 
-            class=" hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium"
+            class=" hover:text-black transition duration-200 ease-in px-3 py-2 rounded-md text-md font-medium"
           >
             Services
           </router-link>
           <a 
             href="#contact" 
-            class=" hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium"
+            class=" hover:text-black transition duration-200 ease-in px-3 py-2 rounded-md text-md font-medium"
           >
             Case Studies
           </a>
           <a 
             href="#contact" 
-            class=" hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium"
+            class=" hover:text-black transition duration-200 ease-in px-3 py-2 rounded-md text-md font-medium"
           >
             Testimonials
           </a>
           <a 
             href="#contact" 
-            class=" hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium"
+            class=" hover:text-black transition duration-200 ease-in px-3 py-2 rounded-md text-md font-medium"
           >
             Contact
           </a>
           <template v-if="!isAuthenticated">
             <router-link 
               to="/login"
-              class="bg-white cursor-pointer text-gray-800 px-8 py-2 rounded-sm text-md font-medium hover:bg-blue-700 hover:text-white"
+              class="bg-white cursor-pointer text-gray-800 transition duration-200 ease-in px-8 py-2 rounded-sm text-md font-medium hover:bg-blue-700 hover:text-white"
             >
               Login
             </router-link>

@@ -19,10 +19,10 @@
             architecture.
           </p>
           <button
-            class="flex items-center justify-center bg-white text-black px-8 py-2 rounded-[25px] text-xl"
+            class="flex items-center justify-center bg-white text-black px-8 py-2 rounded-[25px] text-xl hover:bg-blue-600 hover:text-white cursor-pointer transition duration-200 ease-in group"
           >
-            Get started <span class="ml-2"><img src="../assets/arrow-right.png" alt="" /></span
-            ><span><img src="../assets/arrow-right.png" alt="" /></span>
+            Get started <span class="ml-2"><img class="group-hover:translate-x-1 transition-transform" src="../assets/arrow-right.png" alt="" /></span
+            ><span><img class="group-hover:translate-x-1 transition-transform" src="../assets/arrow-right.png" alt="" /></span>
           </button>
         </div>
       </section>
