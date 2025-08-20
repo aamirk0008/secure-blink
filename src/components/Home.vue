@@ -4,12 +4,12 @@
 
     <main class="space-y-4 bg-gray-50">
       <!-- Hero Section -->
-      <section class="relative bg-blue-600 w-full h-full font-primary text-white py-20">
+      <section class=" bg-blue-600 w-full h-full font-primary text-white py-20">
         <div class="absolute inset-0 z-0">
           <img src="../assets/sb-1.jpg" alt="Background" class="object-cover" />
         </div>
         <div
-          class="relative z-10 w-[35%] flex flex-col gap-8 items-start justify-center px-8 mt-36 ml-36"
+          class="relative z-10 w-[40%] flex flex-col gap-8 items-start justify-center px-8 mt-16 ml-36"
         >
           <h1 class="text-4xl font-bold leading-tight">
             Lorem ipsum is simply dummy text of the printing and typesetting.
@@ -27,10 +27,10 @@
         </div>
       </section>
 
-      <Sample />
+      <About/>
+      <Service/>
       <Technology/>
       <ContactForm/>
-      <!-- <Contact/> -->
 
     </main>
   </div>
@@ -41,19 +41,17 @@ import Navbar from './Navbar.vue'
 import imgBg from '../assets/sb-1.jpg'
 import Service from './Service.vue'
 import About from './About.vue';
-import Sample from './Sample.vue';
 import Technology from './Technology.vue';
 import ContactForm from './ContactForm.vue';
-// import Contact from "./Contact.vue";
 
 export default {
   name: 'Home',
   components: {
     Navbar,
-    Sample,
+    About,
+    Service,
     Technology,
     ContactForm,
-    // Contact
   },
 }
 </script>
