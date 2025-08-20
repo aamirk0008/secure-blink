@@ -96,7 +96,7 @@ export default {
           <div class="flex items-center space-x-4">
             <div>
               <button
-                class="flex items-center gap-1 bg-blue-600 text-white text-sm py-2 px-3 rounded"
+                class="flex items-center gap-1 bg-[#0e77ff] cursor-pointer hover:bg-blue-700 text-white text-sm py-2 px-3 rounded"
               >
                 <span><img class="w-[12px]" src="../assets/dashboard/e-add.png" alt="" /></span> Add
                 Unit
@@ -201,7 +201,7 @@ export default {
             <p class="text-sm text-blue-600">View All</p>
           </div>
           <div class="mt-4">
-            <div class="mx-auto p-5 bg-gray-50 rounded-lg">
+            <div class="mx-auto p-5 shadow-xl bg-gray-50 rounded-lg">
               <div class="flex flex-col space-y-5">
                 <div
                   v-for="country in countries"
