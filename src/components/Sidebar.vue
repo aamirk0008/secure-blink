@@ -13,7 +13,7 @@ export default {
 
 <template>
   <aside
-    class="bg-white flex flex-col items-center justify-between py-6 sticky left-0 top-0 text-gray-800 shadow-xl w-40 h-screen"
+    class="bg-white flex flex-col items-center justify-between py-6 sticky left-0 top-0 text-gray-800 shadow-xl w-40 h-[90vh]"
   >
     <div class="flex flex-col items-center gap-4">
       <div class="">
