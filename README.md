@@ -1,35 +1,79 @@
-# client-side
+# Vue.js Business Application
 
-This template should help get you started developing with Vue 3 in Vite.
+A comprehensive Vue.js application with authentication, dashboard, and contact form functionality.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Landing Page**: Navigation bar with Home, About, Contact links
+- **Authentication**: Login system with route protection
+- **Dashboard**: User insights and analytics display
+- **Contact Form**: Form submission with API integration
+- **Routing**: Vue Router with authentication guards
+- **Styling**: Tailwind CSS for responsive design
 
-## Customize configuration
+## Project Structure
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+\`\`\`
+src/
+├── components/
+│   ├── Home.vue          # Landing page component
+│   ├── Login.vue         # Authentication page
+│   ├── Dashboard.vue     # User dashboard
+│   ├── Navigation.vue    # Navigation bar
+│   └── ContactForm.vue   # Contact form component
+├── App.vue               # Root component
+├── main.js              # Application entry point
+└── style.css            # Global styles with Tailwind
+\`\`\`
 
-## Project Setup
+## Setup Instructions
 
-```sh
-npm install
-```
+1. **Install Dependencies**:
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-### Compile and Hot-Reload for Development
+2. **Configure Environment Variables** (optional):
+   Create a `.env` file in the root directory:
+   \`\`\`
+   VUE_APP_CONTACT_API=https://your-api-endpoint.com/contact
+   \`\`\`
 
-```sh
-npm run dev
-```
+3. **Run Development Server**:
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+   The application will be available at `http://localhost:3000`
 
-### Compile and Minify for Production
+4. **Build for Production**:
+   \`\`\`bash
+   npm run build
+   \`\`\`
 
-```sh
-npm run build
-```
+## API Integration
 
-### Lint with [ESLint](https://eslint.org/)
+The contact form is configured to submit data to an API endpoint. Update the `VUE_APP_CONTACT_API` environment variable with your actual API URL.
 
-```sh
-npm run lint
-```
+Expected API format:
+- **Method**: POST
+- **Content-Type**: application/json
+- **Body**: `{ name: string, email: string, message: string }`
+
+## Authentication
+
+The application uses localStorage for simple authentication state management. In a production environment, replace this with proper JWT tokens and secure authentication.
+
+## Dependencies
+
+- **Vue.js 3**: Progressive JavaScript framework
+- **Vue Router 4**: Official router for Vue.js
+- **Axios**: HTTP client for API requests
+- **Tailwind CSS**: Utility-first CSS framework
+- **Vite**: Fast build tool and development server
+
+## Development Notes
+
+- The dashboard displays placeholder data - replace with actual API calls
+- Authentication is simplified for demo purposes
+- Contact form includes error handling and loading states
+- All routes are properly configured with authentication guards
