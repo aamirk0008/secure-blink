@@ -77,3 +77,8 @@ The application uses localStorage for simple authentication state management. In
 - Authentication is simplified for demo purposes
 - Contact form includes error handling and loading states
 - All routes are properly configured with authentication guards
+
+
+<!-- Dashboard login Credentials -->
+email: admin@gmail.com
+pass: 123456
